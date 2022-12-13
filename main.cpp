@@ -11,9 +11,9 @@ using namespace std;
 
 int main(int argc, const char *argv[])
 {
-    // Étape 4
+    // Step 4
     cout << endl
-         << "### Étape 4: Photos et vidéos" << endl;
+         << "### Step 4: Photos & videos" << endl;
 
     Photo *photo = new Photo("photo.png", "./", 0.2, 0.1);
     photo->display(cout);
@@ -24,10 +24,10 @@ int main(int argc, const char *argv[])
     // photo->play();
     // video->play();
 
-    // Étape 5
+    // Step 5
     cout << endl
-         << "### Étape 5: Polymorphisme" << endl;
-    auto **tableau = new Multimedia *[2];
+         << "### Step 5: Polymorphism" << endl;
+    Multimedia **tableau = new Multimedia *[2];
     unsigned int count = 0;
     tableau[count++] = new Photo("photo.png", "./", 0.2, 0.1);
     tableau[count++] = new Video("video.mp4", "./", 3);
