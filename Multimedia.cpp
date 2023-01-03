@@ -2,7 +2,7 @@
  * @author Tristan Perrot
  */
 
-#include <cstring>
+#include <string>
 #include <iostream>
 #include "multimedia.h"
 
