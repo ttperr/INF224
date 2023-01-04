@@ -14,7 +14,7 @@ PROG = main.out
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = main.cpp Multimedia.cpp
+SOURCES = main.cpp Multimedia.cpp Movie.cpp
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)

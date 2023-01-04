@@ -42,49 +42,18 @@ int main(int argc, const char *argv[])
      cout << endl
           << "### Step 6: Movies" << endl;
 
-     int *tab = new int[2]();
-     tab[0] = 60;
-     tab[1] = 62;
+     int *tab = new int[2]{60,62};
      Movie *movie = new Movie("Inception", "inception.mkv", 122, 2, tab);
-     cout << "Nombre de chapitre: " << movie->getChapterCount() << endl;
-     const int *durationOld = movie->getChapters();
-     cout << "Duree des chapitres: ";
-     for (int i = 0; i < 2; ++i)
-     {
-          cout << durationOld[i] << ' ';
-     }
-     cout << endl;
+     movie->display(cout);
      delete[] tab;
      tab = nullptr;
-     delete[] durationOld;
-     durationOld = nullptr;
-     tab = new int[2]();
-     tab[0] = 52;
-     tab[1] = 70;
+     tab = new int[2]{52,70};
      movie->setChapters(tab, 2);
-     cout << "Nombre de chapitre: " << movie->getChapterCount() << endl;
-     const int *durationNew = movie->getChapters();
-     cout << "Duree des chapitres: ";
-     for (int i = 0; i < 2; ++i)
-     {
-          cout << durationNew[i] << ' ';
-     }
-     cout << endl;
+     movie->display(cout);
      delete movie;
      delete[] tab;
-     delete[] durationNew;
-     tab = new int[3]();
-     tab[0] = 32;
-     tab[1] = 28;
-     tab[2] = 33;
-     movie = new Movie("Dodoro", "Dodoro.mkv", 93, 3, tab);
-     cout << "Nombre de chapitre: " << movie->getChapterCount() << endl;
-     durationNew = movie->getChapters();
-     cout << "Duree des chapitres: ";
-     for (int i = 0; i < 3; ++i)
-     {
-          cout << durationNew[i] << ' ';
-     }
-     cout << endl;
+     tab = new int[3]{32,28,33};
+     movie = new Movie("test", "test.mkv", 93, 3, tab);
+     movie->display(cout);
      return 0;
 }

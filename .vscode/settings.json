@@ -1,6 +1,14 @@
 {
     "files.associations": {
         "*.ejs": "html",
-        "cstring": "cpp"
-    }
+        "cstring": "cpp",
+        "iostream": "cpp"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/ttperr/Télécom/INF224",
+            "binaryPath": "/home/ttperr/Télécom/INF224/main.out",
+            "binaryArgs": []
+        }
+    ]
 }

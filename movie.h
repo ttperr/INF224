@@ -15,6 +15,9 @@ class Movie : public Video
     public:
         Movie();
         Movie(string name, string path, int duration, int numChapter, int*chapters);
+
+        Movie(const Movie& from);
+        Movie& operator=(const Movie& from);
         
         int* getChapters() const;
         void setChapters(int* chapters, int chapterCount);
@@ -23,7 +26,7 @@ class Movie : public Video
 
         virtual void display(ostream &os) const override;
 
-        virtual ~Movie() override;
+        virtual ~Movie();
 
     private:
         int chapterCount = 0;
