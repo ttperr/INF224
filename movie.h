@@ -12,25 +12,25 @@ using namespace std;
 
 class Movie : public Video
 {
-    public:
-        Movie();
-        Movie(string name, string path, int duration, int numChapter, int*chapters);
+public:
+    Movie();
+    Movie(string name, string path, int duration, int numChapter, int *chapters);
 
-        Movie(const Movie& from);
-        Movie& operator=(const Movie& from);
-        
-        int* getChapters() const;
-        void setChapters(int* chapters, int chapterCount);
+    Movie(const Movie &from);
+    Movie &operator=(const Movie &from);
 
-        int getChapterCount() const;
+    int *getChapters() const;
+    void setChapters(int *chapters, int chapterCount);
 
-        virtual void display(ostream &os) const override;
+    int getChapterCount() const;
 
-        virtual ~Movie();
+    virtual void display(ostream &os) const override;
 
-    private:
-        int chapterCount = 0;
-        int *chapters = nullptr;
+    virtual ~Movie();
+
+private:
+    int chapterCount = 0;
+    int *chapters = nullptr;
 };
 
 #endif // MOVIE_H

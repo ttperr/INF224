@@ -42,17 +42,17 @@ int main(int argc, const char *argv[])
      cout << endl
           << "### Step 6: Movies" << endl;
 
-     int *tab = new int[2]{60,62};
+     int *tab = new int[2]{60, 62};
      Movie *movie = new Movie("Inception", "inception.mkv", 122, 2, tab);
      movie->display(cout);
      delete[] tab;
      tab = nullptr;
-     tab = new int[2]{52,70};
+     tab = new int[2]{52, 70};
      movie->setChapters(tab, 2);
      movie->display(cout);
      delete movie;
      delete[] tab;
-     tab = new int[3]{32,28,33};
+     tab = new int[3]{32, 28, 33};
      movie = new Movie("test", "test.mkv", 93, 3, tab);
      movie->display(cout);
      return 0;
