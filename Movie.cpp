@@ -22,7 +22,9 @@ Movie::Movie(const Movie &from) : Video(from), chapterCount(from.chapterCount)
     {
 
         this->setChapters(from.chapters, from.chapterCount);
-    } else {
+    }
+    else
+    {
         chapters = nullptr;
     }
 }
@@ -49,13 +51,20 @@ int *Movie::getChapters() const
 
 void Movie::setChapters(int *newChapters, int newChapterCount)
 {
-    delete[] chapters;
-    chapters = new int[newChapterCount];
-    for (int i = 0; i < newChapterCount; i++)
+    if (newChapters)
     {
-        chapters[i] = newChapters[i];
+        delete[] chapters;
+        chapters = new int[newChapterCount];
+        for (int i = 0; i < newChapterCount; i++)
+        {
+            chapters[i] = newChapters[i];
+        }
+        chapterCount = newChapterCount;
     }
-    chapterCount = newChapterCount;
+    else
+    {
+        chapters = nullptr;
+    }
 }
 
 int Movie::getChapterCount() const
