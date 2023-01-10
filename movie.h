@@ -12,8 +12,13 @@ using namespace std;
 
 class Movie : public Video
 {
+private:
+    int chapterCount = 0;
+    int *chapters = nullptr;
+
 public:
     Movie();
+    Movie(string name, string path, int duration);
     Movie(string name, string path, int duration, int numChapter, int *chapters);
 
     Movie(const Movie &from);
@@ -27,10 +32,6 @@ public:
     virtual void display(ostream &os) const override;
 
     virtual ~Movie();
-
-private:
-    int chapterCount = 0;
-    int *chapters = nullptr;
 };
 
 #endif // MOVIE_H

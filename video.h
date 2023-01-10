@@ -5,7 +5,6 @@
 #ifndef VIDEO_H
 #define VIDEO_H
 
-#include <string>
 #include <iostream>
 #include "multimedia.h"
 
@@ -13,6 +12,9 @@ using namespace std;
 
 class Video : public Multimedia
 {
+private:
+    int duration{};
+
 public:
     Video() : Multimedia() { duration = 0; };
     Video(string name, string path, int duration) : Multimedia(name, path) { this->duration = duration; };
@@ -41,9 +43,6 @@ public:
         cout << "Playing video " << getName() << " located at " << getPath() << endl;
         system(command.data());
     };
-
-private:
-    int duration{};
 };
 
 #endif // VIDEO_H

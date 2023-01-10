@@ -2,7 +2,10 @@
     "files.associations": {
         "*.ejs": "html",
         "cstring": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp",
+        "typeinfo": "cpp",
+        "new": "cpp"
     },
     "makefile.launchConfigurations": [
         {

@@ -11,6 +11,10 @@ using namespace std;
 
 class Multimedia
 {
+private:
+    string name;
+    string path;
+
 public:
     Multimedia();
 
@@ -32,10 +36,6 @@ public:
     virtual void display(ostream &os) const;
 
     virtual void play() const = 0; // Abstract method
-
-private:
-    string name;
-    string path;
 };
 
 #endif // MEDIA_H

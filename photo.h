@@ -11,6 +11,10 @@
 
 class Photo : public Multimedia
 {
+private:
+    double latitude{};
+    double longitude{};
+
 public:
     Photo() : Multimedia()
     {
@@ -45,10 +49,6 @@ public:
         cout << "Playing photo " << getName() << " located at " << getPath() << endl;
         system(command.data());
     };
-
-private:
-    double latitude{};
-    double longitude{};
 };
 
 #endif // PHOTO_H

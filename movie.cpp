@@ -2,12 +2,15 @@
  * @author Tristan Perrot
  */
 
-#include <string>
 #include "movie.h"
 
 using namespace std;
 
 Movie::Movie() : Video(), chapterCount(0), chapters(nullptr)
+{
+}
+
+Movie::Movie(string name, string path, int duration) : Video(name, path, duration), chapterCount(0), chapters(nullptr)
 {
 }
 
@@ -51,9 +54,9 @@ int *Movie::getChapters() const
 
 void Movie::setChapters(int *newChapters, int newChapterCount)
 {
+    delete[] chapters;
     if (newChapters)
     {
-        delete[] chapters;
         chapters = new int[newChapterCount];
         for (int i = 0; i < newChapterCount; i++)
         {
