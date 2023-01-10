@@ -21,8 +21,12 @@ public:
     Group();
     Group(string groupName);
 
+    virtual ~Group();
+
     string getGroupName() const;
     void setGroupName(string groupName);
+
+    
 
     void display(ostream &os) const;
 };
