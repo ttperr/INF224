@@ -3,12 +3,12 @@
  */
 
 #include <iostream>
-#include "multimedia.h"
-#include "photo.h"
-#include "video.h"
-#include "movie.h"
-#include "group.h"
 #include <unistd.h>
+#include "headers/multimedia.h"
+#include "headers/photo.h"
+#include "headers/video.h"
+#include "headers/movie.h"
+#include "headers/group.h"
 using namespace std;
 
 int main(int argc, const char *argv[])
@@ -62,18 +62,19 @@ int main(int argc, const char *argv[])
 
      // Step 7
      cout << endl
-          << "### Step 7: Groups" << endl;
+          << "### Step 8 - 9 : Groups" << endl;
+
+     shared_ptr<Photo> photoShared = shared_ptr<Photo>(photo);
+     cout << photoShared << endl;
 
      Group *group1 = new Group("Group 1");
-     group1->push_back(shared_ptr<Photo>(photo));
+     group1->push_back(photoShared);
      group1->push_back(shared_ptr<Video>(video));
      group1->push_back(shared_ptr<Movie>(movie));
 
      Group *group2 = new Group("Group 2");
-     group2->push_back(shared_ptr<Photo>(photo));
-     group2->push_back(shared_ptr<Photo>(photo));
+     group2->push_back(photoShared);
+     group2->push_back(photoShared);
 
-     group1->display(cout);
-     group2->display(cout);
      return 0;
 }
