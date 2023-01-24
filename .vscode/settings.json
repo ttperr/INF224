@@ -5,7 +5,8 @@
         "iostream": "cpp",
         "string": "cpp",
         "typeinfo": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "iosfwd": "cpp"
     },
     "makefile.launchConfigurations": [
         {

@@ -88,4 +88,5 @@ void Movie::display(ostream &os) const
 Movie::~Movie()
 {
     delete[] chapters;
+    cout << "Movie object " << getName() << " destroyed" << endl;
 }

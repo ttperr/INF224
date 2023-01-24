@@ -49,6 +49,11 @@ public:
         cout << "Playing photo " << getName() << " located at " << getPath() << endl;
         system(command.data());
     };
+
+    ~Photo() override
+    {
+        cout << "Photo object " << getName() << " destroyed" << endl;
+    };
 };
 
 #endif // PHOTO_H

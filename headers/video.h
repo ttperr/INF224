@@ -43,6 +43,11 @@ public:
         cout << "Playing video " << getName() << " located at " << getPath() << endl;
         system(command.data());
     };
+
+    ~Video() override
+    {
+        cout << "Video object " << getName() << " destroyed" << endl;
+    };
 };
 
 #endif // VIDEO_H

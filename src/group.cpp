@@ -32,3 +32,25 @@ void Group::display(ostream &os) const
         it->display(os);
     }
 }
+
+void Group::addMultimedia(shared_ptr<Multimedia> multimedia)
+{
+    this->push_back(multimedia);
+}
+
+void Group::removeMultimedia(shared_ptr<Multimedia> multimedia)
+{
+    this->remove(multimedia);
+}
+
+void Group::removeMultimedia(const string name)
+{
+    for (auto it = this->begin(); it != this->end(); ++it)
+    {
+        if ((*it)->getName() == name)
+        {
+            this->remove(*it);
+            break;
+        }
+    }
+}

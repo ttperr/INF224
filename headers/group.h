@@ -24,7 +24,11 @@ public:
     virtual ~Group();
 
     string getGroupName() const;
-    void setGroupName(string groupName);
+    void setGroupName(const string groupName);
+
+    void addMultimedia(shared_ptr<Multimedia> multimedia);
+    void removeMultimedia(shared_ptr<Multimedia> multimedia);
+    void removeMultimedia(const string name);
 
     
 
