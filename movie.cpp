@@ -2,7 +2,7 @@
  * @author Tristan Perrot
  */
 
-#include "../headers/movie.h"
+#include "headers/movie.h"
 
 using namespace std;
 

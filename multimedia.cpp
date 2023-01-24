@@ -4,7 +4,7 @@
 
 #include <string>
 #include <iostream>
-#include "../headers/multimedia.h"
+#include "headers/multimedia.h"
 
 using namespace std;
 

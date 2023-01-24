@@ -3,12 +3,10 @@
  */
 
 #include <iostream>
-#include "multimedia.h"
-#include "photo.h"
-#include "video.h"
-#include "movie.h"
-#include "group.h"
-#include "mediaManager.h"
+#include "headers/photo.h"
+#include "headers/movie.h"
+#include "headers/group.h"
+#include "headers/mediaManager.h"
 #include <unistd.h>
 using namespace std;
 
@@ -90,10 +88,10 @@ int main(int argc, const char *argv[])
      manager->createPhoto("photo.png", "../data/", 0.2, 0.1);
      manager->createVideo("video.mp4", "../data/", 3);
      manager->createMovie("film.mkv", "../data/", 122, 2, tab);
-     manager->displayMultimedia(cout, "photo");
-     manager->displayMultimedia(cout, "video");
-     manager->displayMultimedia(cout, "film");
-     manager->removeMultimedia("video");
+     manager->displayMultimedia(cout, "photo.png");
+     manager->displayMultimedia(cout, "video.mp4");
+     manager->displayMultimedia(cout, "film.mkv");
+     manager->removeMultimedia("video.mp4");
      delete manager;
 
      return 0;

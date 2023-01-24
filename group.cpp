@@ -2,7 +2,7 @@
  * @author Tristan Perrot
  */
 
-#include "../headers/group.h"
+#include "headers/group.h"
 
 using namespace std;
 
