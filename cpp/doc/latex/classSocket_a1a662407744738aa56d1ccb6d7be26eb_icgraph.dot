@@ -1,0 +1,12 @@
+digraph "Socket::startup"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Socket::startup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ServerSocket::ServerSocket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classServerSocket.html#a2b3098589541243241ca25495155186c",tooltip="Creates a listening socket that waits for connection requests by TCP/IP clients."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Socket::Socket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSocket.html#a8e3f095dfe84d6599761c4ca54900487",tooltip="Creates a Socket from an existing socket file descriptor."];
+}

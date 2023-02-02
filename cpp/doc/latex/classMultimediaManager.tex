@@ -1,0 +1,49 @@
+\hypertarget{classMultimediaManager}{}\doxysection{Multimedia\+Manager Class Reference}
+\label{classMultimediaManager}\index{MultimediaManager@{MultimediaManager}}
+
+
+\mbox{\hyperlink{classMultimediaManager}{Multimedia\+Manager}} class, stores \mbox{\hyperlink{classMultimedia}{Multimedia}} objects and groups in a map of shared smart pointers.  
+
+
+
+
+{\ttfamily \#include $<$multimedia\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMultimediaManager_a36f9a3f7d1d23054852fb2da46e32bbc}\label{classMultimediaManager_a36f9a3f7d1d23054852fb2da46e32bbc}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classPhoto}{Photo}} $>$ {\bfseries create\+Photo} (string name, string path, double latitude, double longitude)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_af73f147cad0c177940d6c308323bcf6f}\label{classMultimediaManager_af73f147cad0c177940d6c308323bcf6f}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classVideo}{Video}} $>$ {\bfseries create\+Video} (string name, string path, int duration)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_ac235270bd80b871b74d64dabdef45620}\label{classMultimediaManager_ac235270bd80b871b74d64dabdef45620}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classMovie}{Movie}} $>$ {\bfseries create\+Movie} (string name, string path, int duration, int num\+Chapter, int $\ast$chapters)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_ad861ebafc29b722aa6352c7b35208f2c}\label{classMultimediaManager_ad861ebafc29b722aa6352c7b35208f2c}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classGroup}{Group}} $>$ {\bfseries create\+Group} (string name)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_ad56c16fa951b092b62d496023ece1046}\label{classMultimediaManager_ad56c16fa951b092b62d496023ece1046}} 
+void {\bfseries display\+Multimedia} (ostream \&os, string name)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_acd512b1c2af13a58f7accf8a83f2b791}\label{classMultimediaManager_acd512b1c2af13a58f7accf8a83f2b791}} 
+void {\bfseries display\+Group} (ostream \&os, string name)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_a12236807ff9799c2600878d715eff499}\label{classMultimediaManager_a12236807ff9799c2600878d715eff499}} 
+void {\bfseries play\+Multimedia} (string name)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_a31f9383f8ea3bd230a47d2434bdaadd6}\label{classMultimediaManager_a31f9383f8ea3bd230a47d2434bdaadd6}} 
+void {\bfseries remove\+Multimedia} (string name)
+\item 
+\mbox{\Hypertarget{classMultimediaManager_a4d670baed89c2cec03366f92b1768cf6}\label{classMultimediaManager_a4d670baed89c2cec03366f92b1768cf6}} 
+void {\bfseries remove\+Group} (string name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMultimediaManager}{Multimedia\+Manager}} class, stores \mbox{\hyperlink{classMultimedia}{Multimedia}} objects and groups in a map of shared smart pointers. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+multimedia\+Manager.\+h\end{DoxyCompactItemize}

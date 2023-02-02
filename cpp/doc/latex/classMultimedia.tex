@@ -1,0 +1,69 @@
+\hypertarget{classMultimedia}{}\doxysection{Multimedia Class Reference}
+\label{classMultimedia}\index{Multimedia@{Multimedia}}
+
+
+\mbox{\hyperlink{classMultimedia}{Multimedia}} class, abstract class of multimedia.  
+
+
+
+
+{\ttfamily \#include $<$multimedia.\+h$>$}
+
+
+
+Inheritance diagram for Multimedia\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMultimedia_a7b74dc23bd18ff8b49fdf325807abe7a}\label{classMultimedia_a7b74dc23bd18ff8b49fdf325807abe7a}} 
+{\bfseries Multimedia} (string name, string path)
+\item 
+\mbox{\Hypertarget{classMultimedia_aea8a3d590c5ec02dec6d8bf4401a3f20}\label{classMultimedia_aea8a3d590c5ec02dec6d8bf4401a3f20}} 
+const string \& {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classMultimedia_a5f24639ac85ed7c4260ecb1d431d10f3}\label{classMultimedia_a5f24639ac85ed7c4260ecb1d431d10f3}} 
+const string \& {\bfseries get\+Path} () const
+\item 
+\mbox{\Hypertarget{classMultimedia_ae132267da6bef8dfed6bf67865efa186}\label{classMultimedia_ae132267da6bef8dfed6bf67865efa186}} 
+void {\bfseries set\+Name} (string name)
+\item 
+\mbox{\Hypertarget{classMultimedia_ab034f9024ed46d0f647546eb25c8f74f}\label{classMultimedia_ab034f9024ed46d0f647546eb25c8f74f}} 
+void {\bfseries set\+Path} (string path)
+\item 
+virtual void \mbox{\hyperlink{classMultimedia_ab444e5e5d90dc97a0f6551916098538f}{display}} (ostream \&os) const
+\item 
+\mbox{\Hypertarget{classMultimedia_a1fa4ae371afc516559955b38e0392acb}\label{classMultimedia_a1fa4ae371afc516559955b38e0392acb}} 
+virtual void {\bfseries play} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMultimedia}{Multimedia}} class, abstract class of multimedia. 
+
+\mbox{\hyperlink{classMultimedia}{Multimedia}} is the root of any multimedia object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMultimedia_ab444e5e5d90dc97a0f6551916098538f}\label{classMultimedia_ab444e5e5d90dc97a0f6551916098538f}} 
+\index{Multimedia@{Multimedia}!display@{display}}
+\index{display@{display}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Multimedia\+::display (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Display Method
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & os stream \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classVideo_a206a0295159ae112f28ea7aced5a08f1}{Video}}, and \mbox{\hyperlink{classMovie_a32a8ec11a733768e36dd6cfed8386fec}{Movie}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{multimedia_8h}{multimedia.\+h}}\item 
+\mbox{\hyperlink{multimedia_8cpp}{multimedia.\+cpp}}\end{DoxyCompactItemize}

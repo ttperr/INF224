@@ -1,0 +1,65 @@
+\hypertarget{classPhoto}{}\doxysection{Photo Class Reference}
+\label{classPhoto}\index{Photo@{Photo}}
+
+
+\mbox{\hyperlink{classPhoto}{Photo}} class, represents a photo.  
+
+
+
+
+{\ttfamily \#include $<$photo.\+h$>$}
+
+
+
+Inheritance diagram for Photo\+:
+% FIG 0
+
+
+Collaboration diagram for Photo\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPhoto_ad78766049fb72010c6139d41a939f14a}\label{classPhoto_ad78766049fb72010c6139d41a939f14a}} 
+{\bfseries Photo} (string name, string path, double latitude, double longitude)
+\item 
+\mbox{\Hypertarget{classPhoto_abf3e0bbc8dbe20b79aab846eedfee74d}\label{classPhoto_abf3e0bbc8dbe20b79aab846eedfee74d}} 
+double {\bfseries get\+Latitude} () const
+\item 
+\mbox{\Hypertarget{classPhoto_af784f282da3cfab4a5e4c45b4da3b3f8}\label{classPhoto_af784f282da3cfab4a5e4c45b4da3b3f8}} 
+double {\bfseries get\+Longitude} () const
+\item 
+\mbox{\Hypertarget{classPhoto_a94319fce6b17eef205d25a15b44f3439}\label{classPhoto_a94319fce6b17eef205d25a15b44f3439}} 
+void {\bfseries set\+Latitude} (double latitude)
+\item 
+\mbox{\Hypertarget{classPhoto_a110586b178177c87da549b6de6d85fb5}\label{classPhoto_a110586b178177c87da549b6de6d85fb5}} 
+void {\bfseries set\+Longitude} (double longitude)
+\item 
+\mbox{\Hypertarget{classPhoto_a8bfc54f6bb210e3fcbd7b5c501e38053}\label{classPhoto_a8bfc54f6bb210e3fcbd7b5c501e38053}} 
+void {\bfseries display} (std\+::ostream \&os) const override
+\item 
+void \mbox{\hyperlink{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}{play}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPhoto}{Photo}} class, represents a photo. 
+
+A photo is a multimedia object that has latitude and a longitude. It can open the related image file from its path + name attributes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}\label{classPhoto_a98b55224b5f9bd016cb08aa2e9a64e46}} 
+\index{Photo@{Photo}!play@{play}}
+\index{play@{play}!Photo@{Photo}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Photo\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Play the photo 
+
+Implements \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{photo_8h}{photo.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\hypertarget{classVideo}{}\doxysection{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+
+
+\mbox{\hyperlink{classVideo}{Video}} class, derived from \mbox{\hyperlink{classMultimedia}{Multimedia}}.  
+
+
+
+
+{\ttfamily \#include $<$video.\+h$>$}
+
+
+
+Inheritance diagram for Video\+:
+% FIG 0
+
+
+Collaboration diagram for Video\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVideo_a55b5671f6c51e1ac90a3707235395def}\label{classVideo_a55b5671f6c51e1ac90a3707235395def}} 
+{\bfseries Video} (string name, string path, int duration)
+\item 
+\mbox{\Hypertarget{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}\label{classVideo_a57f903f1d582ac6ef88922c7a6cb8f7f}} 
+int {\bfseries get\+Duration} () const
+\item 
+\mbox{\Hypertarget{classVideo_aca0f92f98c7b6377aaa23af1645b8172}\label{classVideo_aca0f92f98c7b6377aaa23af1645b8172}} 
+void {\bfseries set\+Duration} (int duration)
+\item 
+void \mbox{\hyperlink{classVideo_a206a0295159ae112f28ea7aced5a08f1}{display}} (ostream \&os) const override
+\item 
+void \mbox{\hyperlink{classVideo_a89e11497f4f200f387805b10bd42922d}{play}} () const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classVideo}{Video}} class, derived from \mbox{\hyperlink{classMultimedia}{Multimedia}}. 
+
+\mbox{\hyperlink{classVideo}{Video}} is a \mbox{\hyperlink{classMultimedia}{Multimedia}} object with a duration. It can open the related video file from its path + name attributes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVideo_a206a0295159ae112f28ea7aced5a08f1}\label{classVideo_a206a0295159ae112f28ea7aced5a08f1}} 
+\index{Video@{Video}!display@{display}}
+\index{display@{display}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Video\+::display (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Display Method
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & os stream \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ab444e5e5d90dc97a0f6551916098538f}{Multimedia}}.
+
+\mbox{\Hypertarget{classVideo_a89e11497f4f200f387805b10bd42922d}\label{classVideo_a89e11497f4f200f387805b10bd42922d}} 
+\index{Video@{Video}!play@{play}}
+\index{play@{play}!Video@{Video}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Video\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Play the video 
+
+Implements \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{video_8h}{video.\+h}}\end{DoxyCompactItemize}

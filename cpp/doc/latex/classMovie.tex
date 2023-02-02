@@ -1,0 +1,76 @@
+\hypertarget{classMovie}{}\doxysection{Movie Class Reference}
+\label{classMovie}\index{Movie@{Movie}}
+
+
+\mbox{\hyperlink{classMovie}{Movie}} class, represents a movie.  
+
+
+
+
+{\ttfamily \#include $<$movie.\+h$>$}
+
+
+
+Inheritance diagram for Movie\+:
+% FIG 0
+
+
+Collaboration diagram for Movie\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMovie_a1f71b3dd8606e0487e9f92630dadd723}\label{classMovie_a1f71b3dd8606e0487e9f92630dadd723}} 
+{\bfseries Movie} (string name, string path, int duration)
+\item 
+\mbox{\Hypertarget{classMovie_a31522e6cfa24edcbd7279a9dab8929de}\label{classMovie_a31522e6cfa24edcbd7279a9dab8929de}} 
+{\bfseries Movie} (string name, string path, int duration, int num\+Chapter, int $\ast$chapters)
+\item 
+\mbox{\Hypertarget{classMovie_af1a12eedff9f8f24319acee931462b7e}\label{classMovie_af1a12eedff9f8f24319acee931462b7e}} 
+{\bfseries Movie} (const \mbox{\hyperlink{classMovie}{Movie}} \&from)
+\item 
+\mbox{\Hypertarget{classMovie_a7fbe1a30494481c248ff65fc77cabdd1}\label{classMovie_a7fbe1a30494481c248ff65fc77cabdd1}} 
+\mbox{\hyperlink{classMovie}{Movie}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMovie}{Movie}} \&from)
+\item 
+\mbox{\Hypertarget{classMovie_a256258ba898fd904564513ae3bc3bba5}\label{classMovie_a256258ba898fd904564513ae3bc3bba5}} 
+const int $\ast$ {\bfseries get\+Chapters} () const
+\item 
+\mbox{\Hypertarget{classMovie_a03d0a27eedd2ed1efe7fc4d6f97ef3e0}\label{classMovie_a03d0a27eedd2ed1efe7fc4d6f97ef3e0}} 
+void {\bfseries set\+Chapters} (int $\ast$chapters, int chapter\+Count)
+\item 
+\mbox{\Hypertarget{classMovie_af3eaa943ec359c47925d70eb5dc7c1ff}\label{classMovie_af3eaa943ec359c47925d70eb5dc7c1ff}} 
+int {\bfseries get\+Chapter\+Count} () const
+\item 
+virtual void \mbox{\hyperlink{classMovie_a32a8ec11a733768e36dd6cfed8386fec}{display}} (ostream \&os) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMovie}{Movie}} class, represents a movie. 
+
+A movie is a video with chapters who are a int\mbox{[}\mbox{]} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMovie_a32a8ec11a733768e36dd6cfed8386fec}\label{classMovie_a32a8ec11a733768e36dd6cfed8386fec}} 
+\index{Movie@{Movie}!display@{display}}
+\index{display@{display}!Movie@{Movie}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Movie\+::display (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Display Method
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & os stream \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia_ab444e5e5d90dc97a0f6551916098538f}{Multimedia}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{movie_8h}{movie.\+h}}\item 
+\mbox{\hyperlink{movie_8cpp}{movie.\+cpp}}\end{DoxyCompactItemize}

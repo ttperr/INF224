@@ -1,0 +1,52 @@
+\hypertarget{classGroup}{}\doxysection{Group Class Reference}
+\label{classGroup}\index{Group@{Group}}
+
+
+\mbox{\hyperlink{classGroup}{Group}} class, stores \mbox{\hyperlink{classMultimedia}{Multimedia}} objects in a list of shared smart pointers.  
+
+
+
+
+{\ttfamily \#include $<$group.\+h$>$}
+
+
+
+Inheritance diagram for Group\+:
+% FIG 0
+
+
+Collaboration diagram for Group\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGroup_aa8992d2ae091dd961ccfb79ab1f33ab1}\label{classGroup_aa8992d2ae091dd961ccfb79ab1f33ab1}} 
+{\bfseries Group} (string group\+Name)
+\item 
+\mbox{\Hypertarget{classGroup_a458c0ade81b40d7c67104590c93034f2}\label{classGroup_a458c0ade81b40d7c67104590c93034f2}} 
+string {\bfseries get\+Group\+Name} () const
+\item 
+\mbox{\Hypertarget{classGroup_a45ce954ef43ce576916cf68ddf683c8d}\label{classGroup_a45ce954ef43ce576916cf68ddf683c8d}} 
+void {\bfseries set\+Group\+Name} (const string group\+Name)
+\item 
+\mbox{\Hypertarget{classGroup_a6ef82853c555d96efdd02b15fe03b046}\label{classGroup_a6ef82853c555d96efdd02b15fe03b046}} 
+void {\bfseries add\+Multimedia} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ multimedia)
+\item 
+\mbox{\Hypertarget{classGroup_ac589ecfa7b5f3a8bb45a9dc0bc797ee6}\label{classGroup_ac589ecfa7b5f3a8bb45a9dc0bc797ee6}} 
+void {\bfseries remove\+Multimedia} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classMultimedia}{Multimedia}} $>$ multimedia)
+\item 
+\mbox{\Hypertarget{classGroup_a18aa6db4f4aa162d7a65f932f298a0f4}\label{classGroup_a18aa6db4f4aa162d7a65f932f298a0f4}} 
+void {\bfseries remove\+Multimedia} (const string name)
+\item 
+\mbox{\Hypertarget{classGroup_a8dfd99db8aa4f567c49198bf4cbf1eff}\label{classGroup_a8dfd99db8aa4f567c49198bf4cbf1eff}} 
+void {\bfseries display} (ostream \&os) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGroup}{Group}} class, stores \mbox{\hyperlink{classMultimedia}{Multimedia}} objects in a list of shared smart pointers. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group_8h}{group.\+h}}\item 
+\mbox{\hyperlink{group_8cpp}{group.\+cpp}}\end{DoxyCompactItemize}
