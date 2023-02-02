@@ -48,5 +48,5 @@ void Multimedia::setPath(string path)
  */
 void Multimedia::display(ostream &os) const
 {
-    os << "Multimedia{Name : " << name << " | Path : " << path << "}\n";
+    os << "Multimedia{Name : " << name << " | Path : " << path << "}";
 }

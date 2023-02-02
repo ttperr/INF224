@@ -31,10 +31,11 @@ void Group::setGroupName(const string groupName)
 // Display
 void Group::display(ostream &os) const
 {
-    os << "Group name: " << groupName << endl;
+    os << "Group name: " << groupName << "; ";
     for (auto & it : *this)
     {  
         it->display(os);
+        os << "; ";
     }
 }
 

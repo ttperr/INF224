@@ -3,7 +3,7 @@
  * @file main.cpp
  */
 
-#define VERSION_1
+#define VERSION_2
 
 #include <iostream>
 #include "photo.h"
@@ -23,9 +23,11 @@ int main(int argc, const char *argv[])
 
      Photo *photo = new Photo("photo.png", "../data/", 0.2, 0.1);
      photo->display(cout);
+     cout << endl;
 
      Video *video = new Video("video.mp4", "../data/", 3);
      video->display(cout);
+     cout << endl;
 
      // photo->play();
      // video->play();
@@ -40,6 +42,7 @@ int main(int argc, const char *argv[])
      for (unsigned int i = 0; i < count; i++)
      {
           tableau[i]->display(cout);
+          cout << endl;
           // tableau[i]->play();
      }
 
@@ -50,19 +53,23 @@ int main(int argc, const char *argv[])
      int *tab = new int[2]{60, 62};
      Movie *movie = new Movie("inception.mkv", "../data", 122, 2, tab);
      movie->display(cout);
+     cout << endl;
      delete[] tab;
      tab = nullptr;
      tab = new int[2]{52, 70};
      Movie *movie2(movie);
      movie2->setChapters(tab, 2);
      movie->display(cout);
+     cout << endl;
      movie2->display(cout);
+     cout << endl;
      delete movie;
      delete[] tab;
      movie = new Movie("./", "test.mkv", 93);
      tab = new int[3]{32, 28, 33};
      movie->setChapters(tab, 3);
      movie->display(cout);
+     cout << endl;
 
      // Step 8 & 9
      cout << endl
@@ -76,11 +83,14 @@ int main(int argc, const char *argv[])
      group1->push_back(shrdPhoto);
      group2->push_back(shrdVideo);
      group1->display(cout);
+     cout << endl;
      group2->display(cout);
+     cout << endl;
      group1->pop_back();
      group1->pop_back();
      delete group1;
      group2->display(cout);
+     cout << endl;
 
      cout << "The Photo is destroyed because it's no longer pointed by anyone"
           << endl;
@@ -98,12 +108,19 @@ int main(int argc, const char *argv[])
      group0->addMultimedia(video_);
      group0->addMultimedia(movie_);
      manager->displayMultimedia(cout, "photo.png");
+     cout << endl;
      manager->displayMultimedia(cout, "video.mp4");
+     cout << endl;
      manager->displayMultimedia(cout, "film.mkv");
+     cout << endl;
      manager->displayMultimedia(cout, "group0");
+     cout << endl;
      manager->removeMultimedia("group0");
      manager->playMultimedia("video.mp4");
      delete manager;
+     
+     cout << endl
+          << "Exiting Main" << endl;
 
      return 0;
 }

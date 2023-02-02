@@ -36,7 +36,7 @@ public:
      */
     void display(ostream &os) const override
     {
-        os << "Multimedia{Name : " << getName() << " | Path : " << getPath() << " | Duration : " << duration << "}\n";
+        os << "Multimedia{Name : " << getName() << " | Path : " << getPath() << " | Duration : " << duration << "}";
     };
 
     /**

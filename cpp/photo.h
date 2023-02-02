@@ -42,7 +42,7 @@ public:
 
     void display(std::ostream &os) const override
     {
-        os << "Multimedia{Name : " << getName() << " | Path : " << getPath() << " | Latitude : " << latitude << " | Longitude : " << longitude << "}\n";
+        os << "Multimedia{Name : " << getName() << " | Path : " << getPath() << " | Latitude : " << latitude << " | Longitude : " << longitude << "}";
     };
 
     /**

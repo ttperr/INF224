@@ -81,7 +81,7 @@ void Movie::display(ostream &os) const
     {
         os << chapters[i] << " ";
     }
-    os << "}\n";
+    os << "}";
 }
 
 // Destructor
