@@ -14,53 +14,61 @@ public class MainWindow extends JFrame {
     // Constructor
     public MainWindow() {
         // Set window title
-        this.setTitle("Remote");
+        this.setTitle("Multimedia Manager");
 
         // Set window default close operation
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Add menu
-        JMenu menu_fichier = new JMenu("Fichier");
-        menu_fichier.setMnemonic(KeyEvent.VK_F);
+        JMenu FileMenu = new JMenu("File");
+        FileMenu.setMnemonic(KeyEvent.VK_F);
         
-        JMenuItem menu_fichier_quitter = new JMenuItem("Quitter");
-        menu_fichier_quitter.setMnemonic(KeyEvent.VK_Q);
-        menu_fichier_quitter.addActionListener(new QuitListener());
+        JMenuItem QuitFileMenu = new JMenuItem("Quit");
+        QuitFileMenu.setMnemonic(KeyEvent.VK_Q);
+        QuitFileMenu.addActionListener(new QuitListener());
         
-        menu_fichier.add(menu_fichier_quitter);
+        FileMenu.add(QuitFileMenu);
 
-        JMenuBar barre_menu = new JMenuBar();
-        barre_menu.add(menu_fichier);
-        setJMenuBar(barre_menu);
+        JMenuBar barMenu = new JMenuBar();
+        barMenu.add(FileMenu);
+        setJMenuBar(barMenu);
 
         JTextPane welcome = new JTextPane();
-        welcome.setText("Welcome in the remote. " +
+        welcome.setText("Welcome in the multimedia manager. " +
                 "\nMultimedia objects available are : \n- photo.png \n- video.mp4" +
                 "\nGroups available are : \n- group0");
         welcome.setEditable(false);
 
-        JPanel output_panel = new JPanel();
-        output_panel.setLayout(new GridLayout(1, 2));
+        JPanel outputPanel = new JPanel();
         outputLine = new JLabel("Disconnected");
-        output_panel.add(outputLine);
+        outputPanel.add(outputLine);
+
+        JComponent mainMultimediaSection = multimediaSection("Multemedia object", "search", "play");
+        JComponent mainGroupSection = groupSection("Groups", "search_group");
+        
+        JPanel sectionPanel = new JPanel();
+        sectionPanel.setLayout(new GridLayout(1,2));
+        sectionPanel.add(mainMultimediaSection);
+        sectionPanel.add(mainGroupSection);
 
         add(welcome);
-        add(connection_section());
-        add(multimedia_section("Multemedia object", "search", "play"));
-        add(group_section("Groups", "search_group"));
-        add(output_panel);
+        add(sectionPanel);
+        add(connection_section(mainMultimediaSection, mainGroupSection));
+        add(outputPanel);
 
         pack();
 
         // Set window visibility
         this.setVisible(true);
+        mainMultimediaSection.setVisible(false);
+        mainGroupSection.setVisible(false);
 
     }
 
     // Connection section, containing inputs for IP address, port and a connection
     // button
-    private JPanel connection_section() {
+    private JPanel connection_section(JComponent mainMultimediaSection, JComponent mainGroupSection) {
         JPanel connection = new JPanel();
         connection.add(new JLabel("Address:"));
         
@@ -83,10 +91,14 @@ public class MainWindow extends JFrame {
                         java_client = null;
                         connect_button.setText("Connect");
                         outputLine.setText("Disconnected");
+                        mainMultimediaSection.setVisible(false);
+                        mainGroupSection.setVisible(false);
                     } else {
                         java_client = new JavaClient(ip_field.getText(), Integer.parseInt(port_field.getText()));
                         outputLine.setText("Connected");
                         connect_button.setText("STOP");
+                        mainMultimediaSection.setVisible(true);
+                        mainGroupSection.setVisible(true);
                     }
                 } catch (Exception ex) {
                     outputLine.setText("Connecting error");
@@ -99,57 +111,74 @@ public class MainWindow extends JFrame {
 
     // Multimedia section, containing a search input, a search button, a play button
     // and a result textArea
-    private JComponent multimedia_section(String title, String search_command, String play_command) {
+    private JComponent multimediaSection(String title, String searchCommand, String playCommand) {
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createTitledBorder(title));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         
-        JPanel tools_panel = new JPanel();
-        
-        JTextField search_field = new JTextField(20);
-        tools_panel.add(search_field);
-        
-        JButton search_button = new JButton("Rechercher");
-        tools_panel.add(search_button);
-        
-        JButton play_button = new JButton("Jouer");
-        tools_panel.add(play_button);
-        
-        panel.add(tools_panel, BorderLayout.CENTER);
-        
-        JTextArea text_area = new JTextArea(10, 40);
-        text_area.setEditable(false);
-        
-        search_button.addActionListener(new TcpCommand(search_command, search_field, text_area));
-        play_button.addActionListener(new TcpCommand(play_command, search_field, text_area));
-        panel.add(new JScrollPane(text_area), BorderLayout.SOUTH);
+        JPanel toolsPanel = new JPanel();
+
+        JTextField searchField = new JTextField(20);
+        toolsPanel.add(searchField);
+
+        JButton searchButton = new JButton("Search");
+        searchButton.setBackground(Color.decode("#5cb85c"));
+        searchButton.setForeground(Color.white);
+        toolsPanel.add(searchButton);
+
+        JButton playButton = new JButton("Play");
+        playButton.setBackground(Color.decode("#0275d8"));
+        playButton.setForeground(Color.white);
+        toolsPanel.add(playButton);
+
+        panel.add(toolsPanel);
+
+        JTextArea textArea = new JTextArea(10, 40);
+        textArea.setEditable(false);
+        textArea.setBorder(BorderFactory.createLineBorder(Color.decode("#dddddd")));
+
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        searchButton.addActionListener(new TcpCommand(searchCommand, searchField, textArea));
+        playButton.addActionListener(new TcpCommand(playCommand, searchField, textArea));
+
+        panel.add(scrollPane, BorderLayout.CENTER);
         return panel;
     }
 
     // Multimedia section, containing a search input, a search button
     // and a result textArea
-    private JComponent group_section(String title, String search_command) {
+    private JComponent groupSection(String title, String searchCommand) {
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createTitledBorder(title));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        
-        JPanel tools_panel = new JPanel();
-        
-        JTextField search_field = new JTextField(20);
-        tools_panel.add(search_field);
-        
-        JButton search_button = new JButton("Rechercher");
-        tools_panel.add(search_button);
-        
-        panel.add(tools_panel, BorderLayout.CENTER);
-
-        JTextArea text_area = new JTextArea(10, 40);
-        text_area.setEditable(false);
-        
-        search_button.addActionListener(new TcpCommand(search_command, search_field, text_area));
-        panel.add(new JScrollPane(text_area), BorderLayout.SOUTH);
+    
+        JPanel toolsPanel = new JPanel();
+    
+        JTextField searchField = new JTextField(20);
+        toolsPanel.add(searchField);
+    
+        JButton searchButton = new JButton("Search");
+        searchButton.setBackground(Color.decode("#5cb85c"));
+        searchButton.setForeground(Color.white);
+        toolsPanel.add(searchButton);
+    
+        panel.add(toolsPanel);
+    
+        JTextArea textArea = new JTextArea(10, 40);
+        textArea.setEditable(false);
+        textArea.setBorder(BorderFactory.createLineBorder(Color.decode("#dddddd")));
+    
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+    
+        searchButton.addActionListener(new TcpCommand(searchCommand, searchField, textArea));
+    
+        panel.add(scrollPane);
         return panel;
     }
+    
 
     // Update the output line with the given text
     private void set_output_line(String text) {
