@@ -104,3 +104,7 @@ Non traitées.
 *Lancez votre programme, cliquez plusieurs fois sur les deux premiers bouton, retaillez la fenêtre. Que constate-t'on ?*
 
 On constate que le texte dépasse de la fenêtre, nous l'insérons au sein d'un composant `JScrollPane` qui rajoute un ascenseur vertical et horizontal lorsque c'est nécessaire.
+
+### Étape 2 & 3 && 4
+
+Traitées.
